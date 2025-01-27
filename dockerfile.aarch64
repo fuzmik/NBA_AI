@@ -1,0 +1,18 @@
+FROM python:3.9-slim-buster
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+ENV PROJECT_ROOT=/app
+
+# You might need to adjust this depending on your .env file location
+COPY .env .env
+
+# Expose the port the Flask app will use
+EXPOSE 5000
+
+CMD ["python", "start_app.py"]
