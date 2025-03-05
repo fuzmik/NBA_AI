@@ -184,3 +184,5 @@ cython_debug/
 #.idea/
 src/web_app/static/img/player_images
 .python-version
+NBA_AI_2023_2024.zip
+dockerfile
